@@ -1,9 +1,5 @@
 # GEN18
 
-## Changelog
-2025-12-21: Initial version (yk)
-
-
 ## Introduction
 GEN18 is a minimal PDK of a generic 180nm bulk CMOS process. 
 It includes symbols for the **xschem** schematic editor. 
