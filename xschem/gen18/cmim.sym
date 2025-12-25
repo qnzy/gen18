@@ -1,0 +1,23 @@
+v {xschem version=3.1.0 file_version=1.2 }
+G {}
+K {type=capacitor
+format="@name @pinlist '@W *@L *1e12*1e-15' m=@m"
+template="name=C1 W=10u L=10u m=1"}
+V {}
+S {}
+E {}
+L 4 0 5 0 30 {}
+L 4 0 -30 0 -5 {}
+L 4 -10 -5 10 -5 {}
+L 4 -10 5 10 5 {}
+L 4 2.5 -22.5 7.5 -22.5 {}
+L 4 5 -25 5 -20 {}
+B 5 -2.5 -32.5 2.5 -27.5 {name=p dir=inout pinnumber=1}
+B 5 -2.5 27.5 2.5 32.5 {name=m dir=inout pinnumber=2}
+T {@#0:pinnumber} -5 -26.25 0 1 0.2 0.2 {layer=13}
+T {@#1:pinnumber} -5 16.25 0 1 0.2 0.2 {layer=13}
+T {@name} -35 -8.75 0 0 0.2 0.2 {}
+T {@m * @W * @L} 15 3.75 0 0 0.2 0.2 {}
+T {@#0:net_name} 10 -28.75 0 0 0.15 0.15 {layer=15}
+T {@#1:net_name} 10 20 0 0 0.15 0.15 {layer=15}
+T {CMIM} 15 -18.75 0 0 0.2 0.2 {}
