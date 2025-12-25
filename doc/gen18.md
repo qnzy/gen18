@@ -65,7 +65,7 @@ The folder *xschem/gen18_examples* contains some example circuits.
 
 * PNPS
   Substrate PNP  
-  Is=1e-17A, BF=5, IKF=5e-4A  
+  Is=5e-18A, BF=5, IKF=5e-4A  
   Example: Q1 c b e PNPS m=1
 
 * CMIM
