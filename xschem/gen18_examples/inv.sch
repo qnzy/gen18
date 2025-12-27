@@ -26,7 +26,7 @@ C {devices/vsource.sym} 360 -190 0 0 {name=V1 value=1.8}
 C {devices/lab_pin.sym} 360 -220 1 0 {name=l5 sig_type=std_logic lab=vdd}
 C {devices/gnd.sym} 360 -160 0 0 {name=l4 lab=GND}
 C {devices/gnd.sym} 200 -160 0 0 {name=l6 lab=GND}
-C {devices/vsource.sym} 480 -190 0 0 {name=V2 value="pwl 0 0 10n 0 \{10n+10p\} 1.8 20n 1.8 \{20n+10p\} 0"}
+C {devices/vsource.sym} 480 -190 0 0 {name=V2 value="pwl 0 0 1n 0 \{1n+10p\} 1.8 2n 1.8 \{2n+10p\} 0"}
 C {devices/lab_pin.sym} 480 -220 1 0 {name=l7 sig_type=std_logic lab=in}
 C {devices/gnd.sym} 480 -160 0 0 {name=l8 lab=GND}
 C {devices/code_shown.sym} 340 -360 0 0 {name=cmd only_toplevel=true
@@ -34,5 +34,5 @@ format="tcleval( @value )"
 value="
 .include [xschem get current_dirname]/../../mdl/gen18.inc
 .save all
-.tran 10p 30n
+.tran 10p 3n
 "}
