@@ -1,7 +1,7 @@
 # GEN18
 
 ## Introduction
-GEN18 is a minimal PDK of a generic 180nm bulk CMOS process. 
+GEN18 is a minimal PDK of a generic 180nm CMOS process. 
 It includes symbols for the **xschem** schematic editor. 
 
 The model card (*mdl/gen18.inc*) is in **HSPICE** syntax and should 
