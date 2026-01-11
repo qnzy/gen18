@@ -26,6 +26,9 @@ The symbols have been adapted from the default **xschem** device library.
 
 The folder *xschem/gen18_examples* contains some example circuits.
 
+When the *gen18/gen18models.sym* symbol is instantiated in a (top-level) 
+schematic, it will include the model file in the netlist.
+
 
 ## Devices
 

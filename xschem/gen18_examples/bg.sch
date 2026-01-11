@@ -59,13 +59,12 @@ C {gen18/pmos18.sym} 100 -440 0 1 {name=M2 model=pmos18 w=1u l=2u m=1}
 C {devices/vsource.sym} 540 -270 0 0 {name=V1 value=1.8}
 C {devices/lab_pin.sym} 540 -300 1 0 {name=l5 sig_type=std_logic lab=vdd}
 C {devices/gnd.sym} 540 -240 0 0 {name=l4 lab=GND}
-C {devices/code_shown.sym} 480 -130 0 0 {name=cmd only_toplevel=true
+C {devices/code_shown.sym} 620 -390 0 0 {name=cmd only_toplevel=true
 format="tcleval( @value )"
 value="
-.include [xschem get current_dirname]/../../mdl/gen18.inc
 .probe i(r2)
 .save all
-.dc temp -40 150 10 
+.dc temp -40 150 10
 "}
 C {gen18/pmos18.sym} 220 -440 0 0 {name=M3 model=pmos18 w=1u l=2u m=1}
 C {gen18/nmos18.sym} 100 -310 0 1 {name=M4 model=nmos18 w=2u l=2u m=1}
@@ -80,3 +79,4 @@ C {gen18/rpp.sym} 380 -230 0 0 {name=R2 model=RPP W=1u L=355u m=1}
 C {devices/lab_pin.sym} 380 -300 2 0 {name=l11 sig_type=std_logic lab=vbg}
 C {devices/lab_pin.sym} 140 -400 0 0 {name=l1 sig_type=std_logic lab=pb}
 C {devices/lab_pin.sym} 180 -340 0 0 {name=l2 sig_type=std_logic lab=nb}
+C {gen18/gen18models.sym} 620 -450 0 0 {name=gen18_models only_toplevel=true}
