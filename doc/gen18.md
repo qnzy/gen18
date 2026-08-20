@@ -68,5 +68,5 @@ schematic, it will include the model file in the netlist.
 * CMIM
   MIM Capacitor  
   Ca=1fF/um^2  
-  Example: c1 n1 n2 '10u\*10u\*1e-12\*1e-15' m=1
+  Example: c1 n1 n2 '10u\*10u\*1e12\*1e-15' m=1
 
