@@ -5,4 +5,5 @@ See the [documentation](doc/gen18.md) for more information.
 
 It includes an **HSPICE** model card as well as **xschem** symbols.
 
-Public Domain / CC0
+The MOSFET models are based on publicly available MOSIS models. 
+Everything else is Public Domain / CC0.
