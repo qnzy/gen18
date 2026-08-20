@@ -22,8 +22,6 @@ The **xschem** symbols are located in the *xschem/gen18* subdirectory.
 Add the *xschem* subdirectory to your *XSCHEM_LIBRARY_PATH*. 
 Symbols will then be relative to this path (e.g. *gen18/nmos18.sym*).
 
-The symbols have been adapted from the default **xschem** device library.
-
 The folder *xschem/gen18_examples* contains some example circuits.
 
 When the *gen18/gen18models.sym* symbol is instantiated in a (top-level) 
