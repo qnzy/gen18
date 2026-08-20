@@ -9,7 +9,6 @@ directly work in most simulators (including **ngspice**). The file
 can be included directly using an *.include* statement. 
 
 The transistor models are taken from MOSIS wafer test reports. 
-The reports can be found in the *doc/ref* directory.
 The other devices were added without reference and have simple
 models.
 
