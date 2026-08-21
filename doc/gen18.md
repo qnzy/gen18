@@ -80,7 +80,7 @@ PMOS33_MODEL, PNPS_MODEL.
 * CMIM  
   MIM Capacitor  
   Parameters: w: width, l: length, m: multiplicity  
-  Ca=1fF/um^2
-  1% parasitic bottom plate cap 
+  Ca=1fF/um^2  
+  1% parasitic bottom plate cap  
   Example: xc1 top bot sub cmim w=10u l=10u m=4
 
