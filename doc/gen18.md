@@ -24,7 +24,9 @@ Symbols will then be relative to this path (e.g. *gen18/nmos18.sym*).
 The folder *xschem/gen18_examples* contains some example circuits.
 
 When the *gen18/gen18models.sym* symbol is instantiated in a (top-level) 
-schematic, it will include the model file in the netlist.
+schematic, it will include the model file in the netlist. For this to 
+work the PDK structure needs to be kept. Specifically, the model needs
+to be at "../../mdl/gen18.inc" relative to the symbol directory.
 
 
 ## Devices
