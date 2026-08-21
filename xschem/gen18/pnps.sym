@@ -1,8 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.8 file_version=1.3}
 G {}
 K {type=pnp
-format="@name @pinlist @model m=@m"
-template="name=Q1 model=PNPS m=1"}
+format="@spiceprefix@name @pinlist @model m=@m"
+template="name=Q1 model=pnps m=1 spiceprefix=x"}
 V {}
 S {}
 F {}
@@ -15,9 +15,9 @@ L 4 20 30 20 60 {}
 L 4 0 -10 15 -25 {}
 L 4 15 -25 20 -30 {}
 L 4 20 -60 20 -30 {}
-B 5 17.5 57.5 22.5 62.5 {name=C dir=inout pinnumber=3}
-B 5 -22.5 -2.5 -17.5 2.5 {name=B dir=in pinnumber=1}
-B 5 17.5 -62.5 22.5 -57.5 {name=E dir=inout pinnumber=2}
+B 5 17.5 57.5 22.5 62.5 {name=C dir=inout pinnumber=1}
+B 5 -22.5 -2.5 -17.5 2.5 {name=B dir=in pinnumber=2}
+B 5 17.5 -62.5 22.5 -57.5 {name=E dir=inout pinnumber=3}
 P 4 4 4 -14 11 -16 7 -23 4 -14 {fill=full}
 T {@name} 32 -8 0 0 0.2 0.2 {}
 T {@model} 32 2 0 0 0.18 0.18 {}

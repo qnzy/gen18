@@ -8,9 +8,9 @@
 * - PNPS: SUBSTRATE PNP
 * - RPP: POLY RESISTOR
 * - RM: METAL RESISTOR
-*
+* - CMIM: MIM CAPACITOR
 
-.MODEL NMOS18 NMOS (                                LEVEL   = 49
+.MODEL NMOS18_MODEL NMOS (                                LEVEL   = 49
 +VERSION = 3.1            TNOM    = 27             TOX     = 4E-9
 +XJ      = 1E-7           NCH     = 2.3549E17      VTH0    = 0.3662648
 +K1      = 0.5802748      K2      = 3.124029E-3    K3      = 1E-3
@@ -23,7 +23,7 @@
 +KETA    = -0.0127714     A1      = 1.158074E-3    A2      = 1
 +RDSW    = 136.5582806    PRWG    = 0.5            PRWB    = -0.2
 +WR      = 1              WINT    = 0              LINT    = 1.702415E-8
-+XL      = 0              XW      = -1E-8          DWG     = -4.211574E-9
++DWG     = -4.211574E-9
 +DWB     = 1.107719E-8    VOFF    = -0.0948017     NFACTOR = 2.1860065
 +CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
 +CDSCB   = 0              ETA0    = 3.335516E-3    ETAB    = 6.028975E-5
@@ -45,9 +45,10 @@
 +CF      = 0              PVTH0   = -1.73163E-3    PRDSW   = -1.4173554
 +PK2     = 1.600729E-3    WKETA   = 1.601517E-3    LKETA   = -3.255127E-3
 +PU0     = 5.2024473      PUA     = 1.584315E-12   PUB     = 7.446142E-25
-+PVSAT   = 1.686297E3     PETA0   = 1.001594E-4    PKETA   = -2.039532E-3    )
++PVSAT   = 1.686297E3     PETA0   = 1.001594E-4    PKETA   = -2.039532E-3
++NOIMOD=2)
 
-.MODEL PMOS18 PMOS (                                LEVEL   = 49
+.MODEL PMOS18_MODEL PMOS (                                LEVEL   = 49
 +VERSION = 3.1            TNOM    = 27             TOX     = 4E-9
 +XJ      = 1E-7           NCH     = 4.1589E17      VTH0    = -0.3708038
 +K1      = 0.5895473      K2      = 0.0235946      K3      = 0
@@ -60,7 +61,7 @@
 +KETA    = 0.0296157      A1      = 0.4449009      A2      = 0.3
 +RDSW    = 306.5789827    PRWG    = 0.5            PRWB    = 0.5
 +WR      = 1              WINT    = 0              LINT    = 2.761033E-8
-+XL      = 0              XW      = -1E-8          DWG     = -2.433889E-8
++DWG     = -2.433889E-8
 +DWB     = -9.34648E-11   VOFF    = -0.0867009     NFACTOR = 2
 +CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
 +CDSCB   = 0              ETA0    = 1.018318E-3    ETAB    = -3.206319E-4
@@ -82,9 +83,10 @@
 +CF      = 0              PVTH0   = 1.4398E-3      PRDSW   = 0.5073407
 +PK2     = 2.190431E-3    WKETA   = 0.0442978      LKETA   = -2.936093E-3
 +PU0     = -0.9769623     PUA     = -4.34529E-11   PUB     = 1E-21
-+PVSAT   = -50            PETA0   = 1.002762E-4    PKETA   = -6.740436E-3    )
++PVSAT   = -50            PETA0   = 1.002762E-4    PKETA   = -6.740436E-3
++NOIMOD=2)
 
-.MODEL NMOS33 NMOS (                                LEVEL   = 49
+.MODEL NMOS33_MODEL NMOS (                                LEVEL   = 49
 +VERSION = 3.1            TNOM    = 27             TOX     = 7.7E-9
 +XJ      = 1E-7           NCH     = 2.2E17         VTH0    = 0.4739035
 +K1      = 0.5980711      K2      = 2.129508E-4    K3      = 89.1316051
@@ -97,7 +99,7 @@
 +KETA    = 2.991409E-3    A1      = 0              A2      = 0.4259175
 +RDSW    = 1.060209E3     PRWG    = -0.0949099     PRWB    = -0.0949472
 +WR      = 1              WINT    = 1.45681E-7     LINT    = 0
-+XL      = -5E-8          XW      = 1.5E-7         DWG     = -5.436366E-9
++DWG     = -5.436366E-9
 +DWB     = 4.655955E-9    VOFF    = -0.0938652     NFACTOR = 1.3714105
 +CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
 +CDSCB   = 0              ETA0    = 0.9911705      ETAB    = 0.0151948
@@ -117,9 +119,10 @@
 +CJSW    = 3.326018E-10   PBSW    = 0.8            MJSW    = 0.1126914
 +CJSWG   = 1.82E-10       PBSWG   = 0.8            MJSWG   = 0.1126914
 +CF      = 0              PVTH0   = -0.0227383     PRDSW   = -91.0475464
-+PK2     = 2.618518E-3    WKETA   = -1.530315E-3   LKETA   = -7.775726E-4    )
-*
-.MODEL PMOS33 PMOS (                                LEVEL   = 49
++PK2     = 2.618518E-3    WKETA   = -1.530315E-3   LKETA   = -7.775726E-4
++NOIMOD=2)
+
+.MODEL PMOS33_MODEL PMOS (                                LEVEL   = 49
 +VERSION = 3.1            TNOM    = 27             TOX     = 7.7E-9
 +XJ      = 1E-7           NCH     = 8.52E16        VTH0    = -0.7163484
 +K1      = 0.408893       K2      = -4.658963E-3   K3      = 83.7384608
@@ -132,7 +135,7 @@
 +KETA    = -6.220316E-3   A1      = 1.304949E-4    A2      = 1
 +RDSW    = 4E3            PRWG    = -0.1517701     PRWB    = 0.0807754
 +WR      = 1              WINT    = 1.472296E-7    LINT    = 0
-+XL      = -5E-8          XW      = 1.5E-7         DWG     = -1.708734E-8
++DWG     = -1.708734E-8
 +DWB     = 9.651369E-9    VOFF    = -0.1353734     NFACTOR = 1.8615508
 +CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
 +CDSCB   = 0              ETA0    = 0.0402356      ETAB    = 3.101076E-3
@@ -152,12 +155,41 @@
 +CJSW    = 2.971607E-10   PBSW    = 0.99           MJSW    = 0.38282
 +CJSWG   = 4.42E-11       PBSWG   = 0.99           MJSWG   = 0.38282
 +CF      = 0              PVTH0   = 7.40325E-3     PRDSW   = -47.9669555
-+PK2     = 2.016103E-3    WKETA   = 1.675253E-3    LKETA   = -3.463411E-3    )
++PK2     = 2.016103E-3    WKETA   = 1.675253E-3    LKETA   = -3.463411E-3
++NOIMOD=2)
 
-.MODEL PNPS PNP LEVEL=1 IS=5E-18 ISE=5E-16 NE=3 BF=5 RE=1 RB=50 RC=10
+.MODEL PNPS_MODEL PNP LEVEL=1 IS=5E-18 ISE=5E-16 NE=3 BF=5 RE=1 RB=50 RC=10
 +IKF=5E-4 VAF=80 VAR=10 XTB=1 XTI=3 EG=1.2
 
-.MODEL RPP R RSH=310 TC1=1E-3
+.subckt nmos18 d g s b w=1u l=0.18u
+m1 d g s b NMOS18_MODEL w='w' l='l' ad='2*w*0.2u' as='2*w*0.2u' pd='2*(w+2*0.2u)' ps='2*(w+2*0.2u)'
+.ends
 
-.MODEL RM R RSH=0.1
+.subckt pmos18 d g s b w=1u l=0.18u
+m1 d g s b PMOS18_MODEL w='w' l='l' ad='2*w*0.2u' as='2*w*0.2u' pd='2*(w+2*0.2u)' ps='2*(w+2*0.2u)'
+.ends
 
+.subckt nmos33 d g s b w=1u l=0.35u
+m1 d g s b NMOS33_MODEL w='w' l='l' ad='2*w*0.2u' as='2*w*0.2u' pd='2*(w+2*0.2u)' ps='2*(w+2*0.2u)'
+.ends
+
+.subckt pmos33 d g s b w=1u l=0.35u
+m1 d g s b PMOS33_MODEL w='w' l='l' ad='2*w*0.2u' as='2*w*0.2u' pd='2*(w+2*0.2u)' ps='2*(w+2*0.2u)'
+.ends
+
+.subckt pnps c b e
+q1 c b e PNPS_MODEL
+.ends
+
+.subckt rpp a b w=1u l=10u np=1 ns=1
+r1 a b 'l/w*ns/np*310' tc1=1e-3
+.ends
+
+.subckt rm a b w=1u l=10u np=1 ns=1
+r1 a b 'l/w*ns/np*0.1' tc1=4e-3
+.ends
+
+.subckt cmim top bot sub w=1u l=1u
+c1 top bot '1f*w*l*1e12'
+c2 bot sub '1f*0.01*w*l*1e12'
+.ends
