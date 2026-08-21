@@ -68,7 +68,7 @@ PMOS33_MODEL, PNPS_MODEL.
 * RM  
   Parameters: w: width, l: length, np: parallel multiplicity, ns: series multiplicity  
   Metal resistor  
-  Rsh=0.1 Ohm/square, TC1=4e-3
+  Rsh=0.1 Ohm/square, TC1=4e-3  
   Example: xr1 n1 n2 rm w=1u l=10u np=2
 
 * PNPS  
