@@ -1,15 +1,20 @@
-* GEN18 FLICKER NOISE TESTS
+* GEN18 FLICKER NOISE TESTS  (BSIM4 model set)
 *
 * Checks that all four MOSFETs have a working 1/f noise mechanism.
 *
 *   ngspice -b test_noise.sp
 *
-* BSIM3 defaults to NOIMOD=1, which uses the SPICE2 flicker model with
-* KF=0 -- i.e. no flicker noise at all, silently. These models carry
-* NOIMOD=2 instead, selecting BSIM3's unified physical model whose
-* NOIA/NOIB/NOIC/EM parameters have sensible non-zero defaults.
+* The model cards set FNOIMOD=1, selecting BSIM4's unified physical
+* flicker model.  NOIA/NOIB/NOIC are deliberately NOT set: BSIM4's own
+* defaults are used.  Note their units differ from BSIM3's by roughly
+* twenty orders of magnitude, so BSIM3 values must never be copied
+* across -- doing so yields a perfectly flat spectrum with no error.
 *
-* The magnitudes below come from those defaults, NOT from the MOSIS
+* The cards also set TNOIMOD=1, which adds velocity-saturation excess
+* thermal noise.  BSIM3 has no equivalent, so a BSIM3 card understates
+* the thermal floor of a minimum-length device.
+*
+* The magnitudes below come from BSIM4's defaults, not from any
 * extraction, so they are generic rather than process-accurate. The
 * tests check the 1/f MECHANISM is present and scales with area, which
 * is what silently breaks. They do not validate absolute noise.
@@ -56,7 +61,7 @@ xn18b  dn18b gn18b 0 0 nmos18 w=20u l=2u
 
 set noaskquit
 echo
-echo "=== gen18 flicker noise tests ==="
+echo "=== gen18 flicker noise tests (BSIM4 model set) ==="
 echo
 
 * Sweep 1 Hz .. 100 MHz, 20 points/decade.
@@ -75,7 +80,8 @@ noise v(dn18b) vgn18b dec 20 1 1e8 1
 setplot const
 
 * A working 1/f mechanism puts the 1kHz value well above the thermal
-* floor. With NOIMOD=1 and KF=0 (the BSIM3 default) the ratio is 1.
+* floor.  With FNOIMOD=0, or with BSIM3-unit NOIA values pasted into a
+* BSIM4 card, the spectrum is flat and the ratio is exactly 1.
 
 let names = 0
 
@@ -87,7 +93,7 @@ let fc  = 1e3 * (fk/vfl)^2
 if rr > 3
   echo "PASS  nmos18 has 1/f      1kHz $&v1k  floor $&vfl  corner $&fc Hz"
 else
-  echo "FAIL  nmos18 NO 1/f       ratio $&rr -- flat spectrum, check NOIMOD"
+  echo "FAIL  nmos18 NO 1/f       ratio $&rr -- flat spectrum, check FNOIMOD"
 end
 
 let v1k = noise3.inoise_spectrum[60]
@@ -98,7 +104,7 @@ let fc  = 1e3 * (fk/vfl)^2
 if rr > 3
   echo "PASS  pmos18 has 1/f      1kHz $&v1k  floor $&vfl  corner $&fc Hz"
 else
-  echo "FAIL  pmos18 NO 1/f       ratio $&rr -- flat spectrum, check NOIMOD"
+  echo "FAIL  pmos18 NO 1/f       ratio $&rr -- flat spectrum, check FNOIMOD"
 end
 
 let v1k = noise5.inoise_spectrum[60]
@@ -109,7 +115,7 @@ let fc  = 1e3 * (fk/vfl)^2
 if rr > 3
   echo "PASS  nmos33 has 1/f      1kHz $&v1k  floor $&vfl  corner $&fc Hz"
 else
-  echo "FAIL  nmos33 NO 1/f       ratio $&rr -- flat spectrum, check NOIMOD"
+  echo "FAIL  nmos33 NO 1/f       ratio $&rr -- flat spectrum, check FNOIMOD"
 end
 
 let v1k = noise7.inoise_spectrum[60]
@@ -120,7 +126,7 @@ let fc  = 1e3 * (fk/vfl)^2
 if rr > 3
   echo "PASS  pmos33 has 1/f      1kHz $&v1k  floor $&vfl  corner $&fc Hz"
 else
-  echo "FAIL  pmos33 NO 1/f       ratio $&rr -- flat spectrum, check NOIMOD"
+  echo "FAIL  pmos33 NO 1/f       ratio $&rr -- flat spectrum, check FNOIMOD"
 end
 
 echo

@@ -8,10 +8,8 @@ The model card (*mdl/gen18.inc*) is in **HSPICE** syntax and should
 directly work in most simulators (including **ngspice**). The file
 can be included directly using an *.include* statement. 
 
-The transistor models are derived from MOSIS wafer test reports. 
-The other devices were added without reference and have simple
-models. "NOIMOD=2" has been added to select the unified physical 
-noise model of BSIM3, using the default parameters.
+All device models are artificially generated to be plausible but
+don't correspond to any real process.
 
 Note that this is frontend only. Nothing is included for layout, 
 LVS, DRC etc.
@@ -38,25 +36,25 @@ PMOS33_MODEL, PNPS_MODEL.
 * NMOS18  
   Parameters: w: width, l: length, m: multiplicity  
   1.8V thin oxide NMOS device.  
-  Vth=0.42V, K=U0.Cox/2=172uA/V^2  
+  Vth=0.42V, K=U0.Cox/2=177uA/V^2  
   Example: xm1 d g s b nmos18 w=1u l=0.5u
 
 * PMOS18  
   Parameters: w: width, l: length, m: multiplicity  
   1.8V thin oxide PMOS device.  
-  Vth=0.41V, K=U0.Cox/2=36uA/V^2  
+  Vth=0.41V, K=U0.Cox/2=50uA/V^2  
   Example: xm1 d g s b pmos18 w=1u l=0.5u
 
 * NMOS33  
   Parameters: w: width, l: length, m: multiplicity  
   3.3V thick oxide NMOS device.  
-  Vth=0.51V, K=U0.Cox/2=93uA/V^2  
+  Vth=0.51V, K=U0.Cox/2=83uA/V^2  
   Example: xm1 d g s b nmos33 w=1u l=0.5u
 
 * PMOS33  
   Parameters: w: width, l: length, m: multiplicity  
   3.3V thick oxide PMOS device.  
-  Vth=0.77V, K=U0.Cox/2=32uA/V^2  
+  Vth=0.77V, K=U0.Cox/2=21uA/V^2  
   Example: xm1 d g s b pmos33 w=1u l=0.5u
 
 * RPP  

@@ -1,4 +1,4 @@
-* GEN18 DEVICE REGRESSION TESTS
+* GEN18 DEVICE REGRESSION TESTS  (BSIM4 model set)
 *
 * Basic sanity checks on every device in gen18.inc.
 * Model-level only: no xschem, no symbols. Runs in a bare container.
@@ -6,14 +6,19 @@
 *   ngspice -b test_devices.sp
 *
 * Every check prints a PASS or FAIL line. For CI, fail the build on any
-* FAIL in the output, e.g.:
+* FAIL in the output AND on any ignored parameter, e.g.:
 *
 *   ngspice -b test_devices.sp | tee test.log
 *   ! grep -q FAIL test.log
+*   ! grep -q "unrecognized parameter" test.log
 *
-* The MOSFET Vgs bands are measured values from ngspice-42, +/-2%.
-* They exist to catch a subckt pointing at the wrong model card; widen
-* them if a simulator or model update moves the operating point.
+* The second grep matters: ngspice silently ignores model parameters it
+* does not implement, so a card can carry values that never take effect.
+*
+* The MOSFET Vgs bands are measured from the BSIM4 model set at +/-2%.
+* They exist to catch a subcircuit pointing at the wrong model card,
+* which otherwise simulates happily and gives plausible numbers.
+* Re-measure them whenever the model cards are regenerated.
 
 .include gen18.inc
 
@@ -119,7 +124,7 @@ xc3    c3t 0 c3s cmim w=10u l=10u m=4
 
 set noaskquit
 echo
-echo "=== gen18 device tests ==="
+echo "=== gen18 device tests (BSIM4 model set) ==="
 echo
 
 op
@@ -159,31 +164,31 @@ echo
 * --- Vgs at 10uA: catches a subckt pointing at the wrong model card ---
 
 let vgs_n18 = v(n18g)
-if vgs_n18 > 0.60 & vgs_n18 < 0.63
+if vgs_n18 > 0.587 & vgs_n18 < 0.611
   echo "PASS  nmos18 Vgs          $&vgs_n18 V"
 else
-  echo "FAIL  nmos18 Vgs          $&vgs_n18 V (expected 0.60..0.63)"
+  echo "FAIL  nmos18 Vgs          $&vgs_n18 V (expected 0.587..0.611)"
 end
 
 let vgs_p18 = 1.8 - v(p18g)
-if vgs_p18 > 0.82 & vgs_p18 < 0.85
+if vgs_p18 > 0.807 & vgs_p18 < 0.840
   echo "PASS  pmos18 |Vgs|        $&vgs_p18 V"
 else
-  echo "FAIL  pmos18 |Vgs|        $&vgs_p18 V (expected 0.82..0.85)"
+  echo "FAIL  pmos18 |Vgs|        $&vgs_p18 V (expected 0.807..0.840)"
 end
 
 let vgs_n33 = v(n33g)
-if vgs_n33 > 0.80 & vgs_n33 < 0.83
+if vgs_n33 > 0.755 & vgs_n33 < 0.786
   echo "PASS  nmos33 Vgs          $&vgs_n33 V"
 else
-  echo "FAIL  nmos33 Vgs          $&vgs_n33 V (expected 0.80..0.83)"
+  echo "FAIL  nmos33 Vgs          $&vgs_n33 V (expected 0.755..0.786)"
 end
 
 let vgs_p33 = 3.3 - v(p33g)
-if vgs_p33 > 1.27 & vgs_p33 < 1.31
+if vgs_p33 > 1.283 & vgs_p33 < 1.335
   echo "PASS  pmos33 |Vgs|        $&vgs_p33 V"
 else
-  echo "FAIL  pmos33 |Vgs|        $&vgs_p33 V (expected 1.27..1.31)"
+  echo "FAIL  pmos33 |Vgs|        $&vgs_p33 V (expected 1.283..1.335)"
 end
 
 echo
@@ -240,6 +245,7 @@ echo
 
 * --- resistor temperature coefficients ---
 
+* The dc sweep has two rows, so the current vectors ARE indexable.
 dc temp 27 127 100
 
 let tc_rpp = (abs(i(vrpp)[0])/abs(i(vrpp)[1]) - 1)/100
@@ -260,6 +266,9 @@ echo
 
 * --- MIM capacitor ---
 
+* Single-point ac: the result is a SCALAR, not a length-1 vector, so it
+* must NOT be indexed with [0].  "frequency" is the plot's scale vector,
+* so the extraction follows whatever the ac line requests.
 ac lin 1 1meg 1meg
 
 let c_main = abs(i(vc1))/(2*pi*frequency)/1e-15
