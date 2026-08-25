@@ -164,31 +164,31 @@ echo
 * --- Vgs at 10uA: catches a subckt pointing at the wrong model card ---
 
 let vgs_n18 = v(n18g)
-if vgs_n18 > 0.587 & vgs_n18 < 0.611
+if vgs_n18 > 0.670 & vgs_n18 < 0.698
   echo "PASS  nmos18 Vgs          $&vgs_n18 V"
 else
-  echo "FAIL  nmos18 Vgs          $&vgs_n18 V (expected 0.587..0.611)"
+  echo "FAIL  nmos18 Vgs          $&vgs_n18 V (expected 0.670..0.698)"
 end
 
 let vgs_p18 = 1.8 - v(p18g)
-if vgs_p18 > 0.807 & vgs_p18 < 0.840
+if vgs_p18 > 0.837 & vgs_p18 < 0.871
   echo "PASS  pmos18 |Vgs|        $&vgs_p18 V"
 else
-  echo "FAIL  pmos18 |Vgs|        $&vgs_p18 V (expected 0.807..0.840)"
+  echo "FAIL  pmos18 |Vgs|        $&vgs_p18 V (expected 0.837..0.871)"
 end
 
 let vgs_n33 = v(n33g)
-if vgs_n33 > 0.755 & vgs_n33 < 0.786
+if vgs_n33 > 0.817 & vgs_n33 < 0.851
   echo "PASS  nmos33 Vgs          $&vgs_n33 V"
 else
-  echo "FAIL  nmos33 Vgs          $&vgs_n33 V (expected 0.755..0.786)"
+  echo "FAIL  nmos33 Vgs          $&vgs_n33 V (expected 0.817..0.851)"
 end
 
 let vgs_p33 = 3.3 - v(p33g)
-if vgs_p33 > 1.283 & vgs_p33 < 1.335
+if vgs_p33 > 1.103 & vgs_p33 < 1.148
   echo "PASS  pmos33 |Vgs|        $&vgs_p33 V"
 else
-  echo "FAIL  pmos33 |Vgs|        $&vgs_p33 V (expected 1.283..1.335)"
+  echo "FAIL  pmos33 |Vgs|        $&vgs_p33 V (expected 1.103..1.148)"
 end
 
 echo
