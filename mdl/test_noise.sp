@@ -5,19 +5,24 @@
 *   ngspice -b test_noise.sp
 *
 * The model cards set FNOIMOD=1, selecting BSIM4's unified physical
-* flicker model.  NOIA/NOIB/NOIC are deliberately NOT set: BSIM4's own
-* defaults are used.  Note their units differ from BSIM3's by roughly
-* twenty orders of magnitude, so BSIM3 values must never be copied
-* across -- doing so yields a perfectly flat spectrum with no error.
+* flicker model, and set NOIA/NOIB/NOIC explicitly.  Their magnitude is
+* fitted so the 1/f corner lands where the models were characterised;
+* NOIB and NOIC are held at fixed ratios to NOIA so only the level is
+* fitted and the shape of the bias and area dependence is preserved.
+* Note that BSIM4's NOIA units differ from BSIM3's by roughly twenty
+* orders of magnitude, so BSIM3 values must never be copied across --
+* doing so yields a perfectly flat spectrum with no error.
 *
-* The cards also set TNOIMOD=1, which adds velocity-saturation excess
-* thermal noise.  BSIM3 has no equivalent, so a BSIM3 card understates
-* the thermal floor of a minimum-length device.
+* The cards set TNOIMOD=0 (charge-based thermal noise).  TNOIMOD=1 adds
+* velocity-saturation excess noise, but in this model set it produced a
+* gamma that RISES with channel length -- about 0.72 at Lmin against
+* 1.04 at 3.6u -- which is backwards, since excess noise belongs at
+* short channel.  Scaling RNOIA/RNOIB fixed the level but not the trend.
 *
-* The magnitudes below come from BSIM4's defaults, not from any
-* extraction, so they are generic rather than process-accurate. The
-* tests check the 1/f MECHANISM is present and scales with area, which
-* is what silently breaks. They do not validate absolute noise.
+* The absolute magnitudes are plausible for 180nm but are not from a
+* real extraction.  The tests check the 1/f MECHANISM is present and
+* scales with area, which is what silently breaks.  They do not
+* validate absolute noise.
 *
 * One transistor per subcircuit: noise analysis needs one output node
 * and one input source, so each device gets its own testbench section
