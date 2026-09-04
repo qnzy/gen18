@@ -71,7 +71,7 @@ C {devices/lab_pin.sym} 380 -300 2 0 {name=l11 sig_type=std_logic lab=vbg}
 C {devices/lab_pin.sym} 140 -400 0 0 {name=l1 sig_type=std_logic lab=pb}
 C {devices/lab_pin.sym} 180 -340 0 0 {name=l2 sig_type=std_logic lab=nb}
 C {gen18/gen18models.sym} 620 -450 0 0 {name=gen18_models only_toplevel=true}
-C {gen18/rpp.sym} 380 -230 0 0 {name=R2 model=RPP W=1u L=360u np=1 ns=1 spiceprefix=x}
+C {gen18/rpp.sym} 380 -230 0 0 {name=R2 model=RPP W=1u L=340u np=1 ns=1 spiceprefix=x}
 C {gen18/rpp.sym} 80 -230 0 0 {name=R1 model=RPP W=1u L=300u np=1 ns=1 spiceprefix=x}
 C {gen18/nmos18.sym} 100 -310 0 1 {name=M1 model=nmos18 w=2u l=2u m=1 spiceprefix=x}
 C {gen18/nmos18.sym} 220 -310 0 0 {name=M4 model=nmos18 w=2u l=2u m=1 spiceprefix=x}
