@@ -14,6 +14,8 @@
 + version=4.8.1 binunit=1 mobmod=0 capmod=2 rdsmod=0
 + fnoimod=1 tnoimod=0 igcmod=0 igbmod=0 diomod=1 rgatemod=0
 + tnom=27
++ kt1=-0.30 kt1l=0 kt2=0.022 ute=-1.5
++ ua1=1e-9 ub1=-1e-18 uc1=5.6e-11 at=3.3e4 prt=0
 + toxe=4e-09 toxp=4e-09 toxm=4e-09 xj=1e-07
 + lint=1.2e-08 wint=1.5e-08
 + vth0=0.37782 k1=0.58 k2=0 k3=-5.06258
@@ -44,6 +46,8 @@
 + version=4.8.1 binunit=1 mobmod=0 capmod=2 rdsmod=0
 + fnoimod=1 tnoimod=0 igcmod=0 igbmod=0 diomod=1 rgatemod=0
 + tnom=27
++ kt1=-0.30 kt1l=0 kt2=0.022 ute=-1.5
++ ua1=1e-9 ub1=-1e-18 uc1=5.6e-11 at=3.3e4 prt=0
 + toxe=4e-09 toxp=4e-09 toxm=4e-09 xj=1e-07
 + lint=1.2e-08 wint=1.5e-08
 + vth0=-0.378927 k1=0.615807 k2=0 k3=-5.22616
@@ -74,6 +78,8 @@
 + version=4.8.1 binunit=1 mobmod=0 capmod=2 rdsmod=0
 + fnoimod=1 tnoimod=0 igcmod=0 igbmod=0 diomod=1 rgatemod=0
 + tnom=27
++ kt1=-0.30 kt1l=0 kt2=0.022 ute=-1.5
++ ua1=1e-9 ub1=-1e-18 uc1=5.6e-11 at=3.3e4 prt=0
 + toxe=7.7e-09 toxp=7.7e-09 toxm=7.7e-09 xj=1e-07
 + lint=1.2e-08 wint=1.5e-08
 + vth0=0.637715 k1=0.6 k2=0 k3=-17.3885
@@ -104,6 +110,8 @@
 + version=4.8.1 binunit=1 mobmod=0 capmod=2 rdsmod=0
 + fnoimod=1 tnoimod=0 igcmod=0 igbmod=0 diomod=1 rgatemod=0
 + tnom=27
++ kt1=-0.30 kt1l=0 kt2=0.022 ute=-1.5
++ ua1=1e-9 ub1=-1e-18 uc1=5.6e-11 at=3.3e4 prt=0
 + toxe=7.7e-09 toxp=7.7e-09 toxm=7.7e-09 xj=1e-07
 + lint=1.2e-08 wint=1.5e-08
 + vth0=-0.747267 k1=0.404932 k2=0 k3=15.491
