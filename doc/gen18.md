@@ -48,13 +48,13 @@ PMOS33_MODEL, PNPS_MODEL.
 * NMOS33  
   Parameters: w: width, l: length, m: multiplicity  
   3.3V thick oxide NMOS device.  
-  Vth=0.51V, K=U0.Cox/2=58uA/V^2  
+  Vth=0.66V, K=U0.Cox/2=55uA/V^2  
   Example: xm1 d g s b nmos33 w=1u l=0.5u
 
 * PMOS33  
   Parameters: w: width, l: length, m: multiplicity  
   3.3V thick oxide PMOS device.  
-  Vth=0.83V, K=U0.Cox/2=32uA/V^2  
+  Vth=0.85V, K=U0.Cox/2=23uA/V^2  
   Example: xm1 d g s b pmos33 w=1u l=0.5u
 
 * RPP  

@@ -178,17 +178,17 @@ else
 end
 
 let vgs_n33 = v(n33g)
-if vgs_n33 > 0.857 & vgs_n33 < 0.892
+if vgs_n33 > 1.009 & vgs_n33 < 1.051
   echo "PASS  nmos33 Vgs          $&vgs_n33 V"
 else
-  echo "FAIL  nmos33 Vgs          $&vgs_n33 V (expected 0.857..0.892)"
+  echo "FAIL  nmos33 Vgs          $&vgs_n33 V (expected 1.009..1.051)"
 end
 
 let vgs_p33 = 3.3 - v(p33g)
-if vgs_p33 > 1.252 & vgs_p33 < 1.303
+if vgs_p33 > 1.345 & vgs_p33 < 1.400
   echo "PASS  pmos33 |Vgs|        $&vgs_p33 V"
 else
-  echo "FAIL  pmos33 |Vgs|        $&vgs_p33 V (expected 1.252..1.303)"
+  echo "FAIL  pmos33 |Vgs|        $&vgs_p33 V (expected 1.345..1.400)"
 end
 
 echo

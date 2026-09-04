@@ -76,28 +76,28 @@
 + tnom=27
 + toxe=7.7e-09 toxp=7.7e-09 toxm=7.7e-09 xj=1e-07
 + lint=1.2e-08 wint=1.5e-08
-+ vth0=0.500281 k1=0.6 k2=0 k3=-17.9898
-+ k3b=0 w0=2.5e-06 lpe0=1.87394e-07 lpeb=0
++ vth0=0.637715 k1=0.6 k2=0 k3=-17.3885
++ k3b=0 w0=2.5e-06 lpe0=1.92848e-07 lpeb=0
 + ndep=2.2e+17
 + dvt0=2.2 dvt1=0.54 dvt2=-0.01 dvt0w=0
-+ dvt1w=0 dvt2w=0 dsub=0.17598 eta0=0.06
++ dvt1w=0 dvt2w=0 dsub=0.175975 eta0=0.06
 + etab=-0.02
-+ nfactor=1.32633 voff=-0.08 cdsc=0.00024 cdscd=0
++ nfactor=1.30216 voff=-0.08 cdsc=0.00024 cdscd=0
 + cdscb=0 cit=0
-+ u0=0.0258659 ua=1.2e-09 ub=1e-18 uc=-4.65e-11
++ u0=0.0246903 ua=1.2e-09 ub=1e-18 uc=-4.65e-11
 + vsat=158000 a0=1 a1=0 a2=1
 + ags=0 b0=0 b1=0 keta=-0.03
 + delta=0.01
-+ rdsw=1119.19 prwg=0 prwb=0 wr=1
-+ pclm=1.3 pdiblc1=0.39 pdiblc2=0.00308554 pdiblcb=0
++ rdsw=365.689 prwg=0 prwb=0 wr=1
++ pclm=1.3 pdiblc1=0.39 pdiblc2=0.00335142 pdiblcb=0
 + drout=0.56 pvag=0.1 pscbe1=1e+09 pscbe2=1e-09
-+ cgso=2.16484e-10 cgdo=2.16484e-10 cgbo=1e-10
++ cgso=2.1731e-10 cgdo=2.1731e-10 cgbo=1e-10
 + cjs=0.0009161 cjd=0.0009161 cjsws=3.326e-10 cjswd=3.326e-10
 + cjswgs=1.82e-10 cjswgd=1.82e-10 pbs=0.8 pbd=0.8
 + mjs=0.3473 mjd=0.3473 pbsws=0.8 pbswd=0.8
 + mjsws=0.1127 mjswd=0.1127
 + jss=1e-07 jsd=1e-07 jsws=1e-13 jswd=1e-13
-+ noia=6.60947e+40 noib=3.30474e+25 noic=9.25326e+08 em=4.1e+07
++ noia=6.19645e+40 noib=3.09823e+25 noic=8.67503e+08 em=4.1e+07
 + ef=1 af=1 kf=0
 
 .model pmos33_model pmos level=54
@@ -106,28 +106,28 @@
 + tnom=27
 + toxe=7.7e-09 toxp=7.7e-09 toxm=7.7e-09 xj=1e-07
 + lint=1.2e-08 wint=1.5e-08
-+ vth0=-0.747117 k1=0.404932 k2=0 k3=15.7067
-+ k3b=0 w0=2.5e-06 lpe0=1.01056e-07 lpeb=0
++ vth0=-0.747267 k1=0.404932 k2=0 k3=15.491
++ k3b=0 w0=2.5e-06 lpe0=1.01579e-07 lpeb=0
 + ndep=8.52e+16
 + dvt0=2.2 dvt1=0.54 dvt2=-0.01 dvt0w=0
-+ dvt1w=0 dvt2w=0 dsub=0.292225 eta0=0.06
++ dvt1w=0 dvt2w=0 dsub=0.292138 eta0=0.06
 + etab=-0.02
-+ nfactor=1.97148 voff=-0.08 cdsc=0.00024 cdscd=0
++ nfactor=1.90396 voff=-0.08 cdsc=0.00024 cdscd=0
 + cdscb=0 cit=0
-+ u0=0.0142059 ua=1.2e-09 ub=1e-18 uc=-3.1e-11
++ u0=0.0101846 ua=1.2e-09 ub=1e-18 uc=-3.1e-11
 + vsat=130000 a0=1 a1=0 a2=1
 + ags=0 b0=0 b1=0 keta=-0.03
 + delta=0.01
-+ rdsw=4000 prwg=0 prwb=0 wr=1
-+ pclm=1.3 pdiblc1=0.39 pdiblc2=0.00172873 pdiblcb=0
++ rdsw=350 prwg=0 prwb=0 wr=1
++ pclm=1.3 pdiblc1=0.39 pdiblc2=0.00229121 pdiblcb=0
 + drout=0.56 pvag=0.1 pscbe1=1e+09 pscbe2=1e-09
-+ cgso=2.44993e-10 cgdo=2.44993e-10 cgbo=1e-10
++ cgso=2.44855e-10 cgdo=2.44855e-10 cgbo=1e-10
 + cjs=0.001413 cjd=0.001413 cjsws=2.972e-10 cjswd=2.972e-10
 + cjswgs=4.42e-11 cjswgd=4.42e-11 pbs=0.99 pbd=0.99
 + mjs=0.561 mjd=0.561 pbsws=0.99 pbswd=0.99
 + mjsws=0.3828 mjswd=0.3828
 + jss=1e-07 jsd=1e-07 jsws=1e-13 jswd=1e-13
-+ noia=1.46924e+40 noib=3.55555e+24 noic=6.52341e+07 em=4.1e+07
++ noia=1.14404e+40 noib=2.76859e+24 noic=5.07955e+07 em=4.1e+07
 + ef=1 af=1 kf=0
 
 .MODEL PNPS_MODEL PNP LEVEL=1 IS=5E-18 ISE=5E-16 NE=3 BF=5 RE=1 RB=50 RC=10
@@ -135,22 +135,22 @@
 
 .subckt nmos18 d g s b w=1u l=0.18u
 m1 d g s b NMOS18_MODEL w='w' l='l' 
-+ad='w*0.4u' as='w*0.4u' pd='2*(w+0.4u)' ps='2*(w+0.4u)' nrd='0.4u/w' nrs='0.4u/w'
++ad='w*0.4u' as='w*0.4u' pd='2*(w+0.4u)' ps='2*(w+0.4u)'
 .ends
 
 .subckt pmos18 d g s b w=1u l=0.18u
 m1 d g s b PMOS18_MODEL w='w' l='l' 
-+ad='w*0.4u' as='w*0.4u' pd='2*(w+0.4u)' ps='2*(w+0.4u)' nrd='0.4u/w' nrs='0.4u/w'
++ad='w*0.4u' as='w*0.4u' pd='2*(w+0.4u)' ps='2*(w+0.4u)'
 .ends
 
 .subckt nmos33 d g s b w=1u l=0.35u
 m1 d g s b NMOS33_MODEL w='w' l='l' 
-+ad='w*0.4u' as='w*0.4u' pd='2*(w+0.4u)' ps='2*(w+0.4u)' nrd='0.4u/w' nrs='0.4u/w'
++ad='w*0.4u' as='w*0.4u' pd='2*(w+0.4u)' ps='2*(w+0.4u)'
 .ends
 
 .subckt pmos33 d g s b w=1u l=0.35u
 m1 d g s b PMOS33_MODEL w='w' l='l' 
-+ad='w*0.4u' as='w*0.4u' pd='2*(w+0.4u)' ps='2*(w+0.4u)' nrd='0.4u/w' nrs='0.4u/w'
++ad='w*0.4u' as='w*0.4u' pd='2*(w+0.4u)' ps='2*(w+0.4u)'
 .ends
 
 .subckt pnps c b e
