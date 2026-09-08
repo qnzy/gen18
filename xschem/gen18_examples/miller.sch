@@ -40,7 +40,7 @@ N 280 -390 320 -390 {lab=n2}
 N 690 -440 690 -420 {lab=vdd}
 N 280 -390 280 -340 {lab=n2}
 N 280 -340 360 -340 {lab=n2}
-N 620 -390 620 -320 {lab=n1}
+N 620 -390 620 -310 {lab=n1}
 N 690 60 690 80 {lab=GND}
 N 690 30 710 30 {lab=GND}
 N 710 30 710 80 {lab=GND}
@@ -56,13 +56,12 @@ N 360 -360 360 -340 {lab=n2}
 N 220 -360 220 -320 {lab=n1}
 N 620 -390 650 -390 {lab=n1}
 N 220 -320 220 -250 {lab=n1}
-N 620 -320 620 -300 {lab=n1}
 N 620 -240 620 -220 {lab=vout}
 N 690 -440 710 -440 {lab=vdd}
 N 710 -440 710 -390 {lab=vdd}
 N 690 -390 710 -390 {lab=vdd}
 N 380 -440 690 -440 {lab=vdd}
-N 220 -320 620 -320 {lab=n1}
+N 220 -330 620 -330 {lab=n1}
 N 80 -20 630 -20 {lab=n3}
 N 300 80 690 80 {lab=GND}
 N 620 -220 690 -220 {lab=vout}
@@ -77,6 +76,7 @@ N 20 -220 20 -20 {lab=n3}
 N 280 -160 280 0 {lab=n4}
 N 20 -20 20 0 {lab=n3}
 N 690 -220 690 -0 {lab=vout}
+N 620 -250 620 -240 {lab=vout}
 C {gen18/nmos18.sym} 200 -220 0 0 {name=M1 model=nmos18 w=4u l=1u m=4 spiceprefix=x}
 C {gen18/nmos18.sym} 380 -220 0 1 {name=M2 model=nmos18 w=4u l=1u m=4 spiceprefix=x}
 C {gen18/nmos18.sym} 40 30 0 1 {name=M4 model=nmos18 w=0.5u l=2u m=1 spiceprefix=x}
@@ -89,13 +89,13 @@ C {devices/lab_pin.sym} -100 -440 2 1 {name=p1 sig_type=std_logic lab=vdd}
 C {gen18/gen18models.sym} 770 -370 0 0 {name=gen18_models only_toplevel=true}
 C {gen18/pmos18.sym} 670 -390 0 0 {name=M7 model=pmos18 w=2u l=0.5u m=4 spiceprefix=x}
 C {devices/gnd.sym} 880 -60 0 0 {name=l2 lab=GND}
-C {gen18/cmim.sym} 620 -270 0 0 {name=c1 model=cmim w=10u l=10u m=48 spiceprefix=x}
-C {devices/gnd.sym} 600 -270 1 0 {name=l3 lab=GND}
+C {gen18/cmim.sym} 620 -280 0 0 {name=c1 model=cmim w=10u l=10u m=48 spiceprefix=x}
+C {devices/gnd.sym} 610 -250 0 1 {name=l3 lab=GND}
 C {gen18/nmos18.sym} 260 30 0 0 {name=M3 model=nmos18 w=0.5u l=2u m=2 spiceprefix=x}
 C {gen18/nmos18.sym} 670 30 0 0 {name=M8 model=nmos18 w=0.5u l=2u m=10 spiceprefix=x}
 C {devices/lab_pin.sym} 180 -220 2 1 {name=p2 sig_type=std_logic lab=vin}
 C {devices/lab_pin.sym} 690 -300 0 1 {name=p3 sig_type=std_logic lab=vout}
-C {devices/lab_pin.sym} 620 -340 0 1 {name=p4 sig_type=std_logic lab=n1}
+C {devices/lab_pin.sym} 620 -360 0 1 {name=p4 sig_type=std_logic lab=n1}
 C {devices/lab_pin.sym} 280 -360 0 1 {name=p5 sig_type=std_logic lab=n2}
 C {devices/lab_pin.sym} 400 -20 3 1 {name=p6 sig_type=std_logic lab=n3}
 C {devices/lab_pin.sym} 360 -160 0 1 {name=p7 sig_type=std_logic lab=n4}

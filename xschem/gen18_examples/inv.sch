@@ -17,10 +17,9 @@ N 200 -370 200 -350 {lab=vdd}
 N 140 -320 160 -320 {lab=in}
 N 140 -320 140 -210 {lab=in}
 N 140 -210 160 -210 {lab=in}
-N 310 -200 310 -170 {lab=GND}
-N 310 -170 330 -170 {lab=GND}
 N 330 -260 330 -230 {lab=out}
 N 200 -260 330 -260 {lab=out}
+N 320 -170 330 -170 {lab=GND}
 C {devices/lab_pin.sym} 140 -270 0 0 {name=l1 sig_type=std_logic lab=in}
 C {devices/lab_pin.sym} 200 -270 2 0 {name=l2 sig_type=std_logic lab=out}
 C {devices/lab_pin.sym} 200 -370 1 0 {name=l3 sig_type=std_logic lab=vdd}
